@@ -101,6 +101,15 @@ Mysql2::Error: Specified key was too long; max key length is 767 bytes:
 ```
 If your system doesn't have a pre-built 5.7 package, [this install log](https://github.com/exercism/pharo/issues/103#issuecomment-420769061) may be helpful.
 
+### Secrets.yml Symlink that doesn't point to a valid file 
+The following error is seen if you run setup for the first time without having previously set up OAuth
+```
+$ bundle exec rake exercism:setup
+rake aborted!
+File "/Users/<username>/dev/website/config/secrets.yml" is a symlink that does not point to a valid file
+```
+Follow the steps described on the [OAuth setup section](https://github.com/exercism/website#oauth-setup)
+
 ### Windows Subsystem For Linux
 Installation on Windows Subsystem For Linux requires Windows Version 1809 (release due October 2018).
 Tracked at [exercism/exercism#4346](https://github.com/exercism/exercism/issues/4346).
